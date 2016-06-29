@@ -96,7 +96,6 @@ TodoStore.observe(function(listenables, state, value){
 // Inside your Task Component
 import React from "react";
 import ReactDOM from "react-dom";
-import riotux from "riotux";
 import todoStore from "../store/todoStore";
 
 export default class Tasks extends React.Component {
