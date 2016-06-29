@@ -1,5 +1,5 @@
 # rtx <br/>
-[![npm package](https://img.shields.io/badge/npm-0.0.1-blue.svg)](https://www.npmjs.com/package/rtx)
+[![npm package](https://img.shields.io/badge/npm-0.0.2-blue.svg)](https://www.npmjs.com/package/rtx)
 > A reactive library for Javascript Apps.
 
 ### Why rtx?
