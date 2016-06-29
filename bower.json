@@ -1,0 +1,26 @@
+{
+  "name": "_r",
+  "description": "A reactive library for Javascript Applications.",
+  "main": "riotux.js",
+  "authors": [
+    "Luis Vinícius <luis@startamus.com.br>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "riotjs",
+    "redux-flux",
+    "riot.js",
+    "flux",
+    "redux",
+    "_r"
+  ],
+  "homepage": "https://github.com/luisvinicius167/_r",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
