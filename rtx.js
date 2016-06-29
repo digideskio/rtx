@@ -1,13 +1,13 @@
-!function (e, n) { "function" == typeof define && define.amd ? define([], n) : "undefined" != typeof module ? module.exports = n : e._r = n() } (this,
+!function (e, n) { "function" == typeof define && define.amd ? define([], n) : "undefined" != typeof module ? module.exports = n : e.rtx = n() } (this,
   function () {
     /*!
       --------------------------------
-      _r 
+      rtx 
       --------------------------------
-      + https://luisvinicius167.github.io/_r/
+      + https://luisvinicius167.github.io/rtx/
       + Copyright 2016 Luis Vinícius
       + Licensed under the MIT license
-      + Documentation: https://github.com/luisvinicius167/_r
+      + Documentation: https://github.com/luisvinicius167/rtx
     */
     'use strict';
     /**
@@ -27,17 +27,17 @@
      */
     var _store = {};
     /**
-     * @name _r
+     * @name rtx
      * @desc the object that creates the store
      */
-    var _r = {};
+    var rtx = {};
     /**
      * @name createStore
      * @desc create an Store
      * @param {object} obj the all data of the store
      * @return {object} the store instance
      */
-    _r.createStore = function (obj) {
+    rtx.createStore = function (obj) {
       var store = Object.assign({}, _store);
       store.name = obj.name;
       store.listenables = []
@@ -100,6 +100,6 @@
     _store.get = function (stateName) {
       return _storeContainer[this.name].state[stateName]
     }
-    return _r;
+    return rtx;
   }
 );

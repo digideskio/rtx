@@ -1,7 +1,7 @@
 {
-  "name": "_r",
+  "name": "rtx",
   "description": "A reactive library for Javascript Applications.",
-  "main": "dist/_r.min.js",
+  "main": "dist/rtx.min.js",
   "authors": [
     "Luis Vinícius <luis@startamus.com.br>"
   ],
@@ -12,9 +12,9 @@
     "riot.js",
     "flux",
     "redux",
-    "_r"
+    "rtx"
   ],
-  "homepage": "https://github.com/luisvinicius167/_r",
+  "homepage": "https://github.com/luisvinicius167/rtx",
   "moduleType": [],
   "ignore": [
     "**/.*",

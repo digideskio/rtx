@@ -1,9 +1,9 @@
-# _r <br/>
-[![npm package](https://img.shields.io/badge/npm-0.0.1-blue.svg)](https://www.npmjs.com/package/_r)
+# rtx <br/>
+[![npm package](https://img.shields.io/badge/npm-0.0.1-blue.svg)](https://www.npmjs.com/package/rtx)
 > A reactive library for Javascript Apps.
 
-### Why _r?
-_r is a reactive library that provides for your application multiple stores, wich each store manage her state. You can organize your stores and turn your application more organized.
+### Why rtx?
+**rtx** is a reactive library that provides for your application multiple stores, wich each store manage her state. You can organize your stores and turn your application more organized.
 
 <pre align="center">
 ╔═════════╗       ╔════════════╗       ╔═══════════╗       ╔═════════════════╗
@@ -13,8 +13,8 @@ _r is a reactive library that provides for your application multiple stores, wic
 </pre>
 
 ### Install
-* Npm: ``` npm install _r ```
-* Bower: ``` bower install _r ```
+* Npm: ``` npm install rtx ```
+* Bower: ``` bower install rtx ```
 
 ### Reasons for use
 * Tiny size: ~1kb
@@ -26,7 +26,7 @@ _r is a reactive library that provides for your application multiple stores, wic
 * Unidirectional data flow
 
 ### Data Flow
-In _r data flow is unidirectional, as it should be in Flux:
+In **rtx** data flow is unidirectional, as it should be in Flux:
 
 * The store dispatch her actions
 * Actions change the state.
@@ -38,7 +38,7 @@ In _r data flow is unidirectional, as it should be in Flux:
 * Actions must be synchronous, and the only side effects they produce should be mutating the state.
 
 ### Stores:
-A **Store** is basically a container that holds your application state. There are two things that makes a **_r** store different:
+A **Store** is basically a container that holds your application state. There are two things that makes a **rtx** store different:
 
  * A Store is **reactive**. Every time the state changes, you can trigger a handler.
 
@@ -47,9 +47,9 @@ A **Store** is basically a container that holds your application state. There ar
 Creating a Store is pretty straightforward - just provide an name, state and actions:
 
 ```javascript
-import _r from "_r";
+import rtx from "rtx";
 
-let TodoStore = _r.createStore({
+let TodoStore = rtx.createStore({
   name: 'Todo',
   state:  {
     todos: []
@@ -75,7 +75,7 @@ module.exports = TodoStore;
 ```
 
 #### State
-Application state is held in the store, as a single object. **_r** uses a **single state tree** - that is, this single object contains all your Store level state and serves as the *"single source of truth"*.
+Application state is held in the store, as a single object. **rtx** uses a **single state tree** - that is, this single object contains all your Store level state and serves as the *"single source of truth"*.
 
 #### Observe state changes in your Component
 > When some state change in your store, your store handler function will called.
@@ -192,7 +192,7 @@ Just suggesting.
 ### API Reference
 
 * #### Create a Store:
-  * ``` _r.createStore({ name, state, actions }) ```: Create a single store with the name of Store, State and Actions.
+  * ``` rtx.createStore({ name, state, actions }) ```: Create a single store with the name of Store, State and Actions.
 
 * #### Store Actions:
   * ``` yourStore.dispatch(stateName, action [,...arguments]) ```: Call a store action.
