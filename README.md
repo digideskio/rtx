@@ -48,7 +48,7 @@ Creating a Store is pretty straightforward - just provide an name, state and act
 ```javascript
 import rtx from "rtx";
 
-let TodoStore = rtx.createStore({
+let todoStore = rtx.createStore({
   name: 'Todo',
   state:  {
     todos: []
@@ -64,13 +64,13 @@ let TodoStore = rtx.createStore({
 })
 
 // every time the state changes, this function will be triggered 
-TodoStore.observe(function(listenables, state, value){
+todoStore.observe(function(listenables, state, value){
   listenables.forEach( ( component ) => {
     component.forceUpdate();
   })
 })
 
-module.exports = TodoStore;
+module.exports = todoStore;
 ```
 
 #### State
