@@ -1,14 +1,14 @@
 !function (e, n) { "function" == typeof define && define.amd ? define([], n) : "undefined" != typeof module ? module.exports = n : e._r = n() } (this,
   function () {
-  /*!
-    --------------------------------
-    _r 
-    --------------------------------
-    + https://luisvinicius167.github.io/_r/
-    + Copyright 2016 Luis Vinícius
-    + Licensed under the MIT license
-    + Documentation: https://github.com/luisvinicius167/_r
-  */
+    /*!
+      --------------------------------
+      _r 
+      --------------------------------
+      + https://luisvinicius167.github.io/_r/
+      + Copyright 2016 Luis Vinícius
+      + Licensed under the MIT license
+      + Documentation: https://github.com/luisvinicius167/_r
+    */
     'use strict';
     /**
      * Helpers
@@ -60,14 +60,31 @@
 
       if (this.hasOwnProperty('handler')) {
         this.handler(
-          this.listenables, 
-          stateName, 
+          this.listenables,
+          stateName,
           _storeContainer[this.name].state[stateName]
         );
       }
     }
-    _store.addListener = function( component ){
+    /**
+     * @name addListener
+     * @desc Add an listener to watch the state changes
+     */
+    _store.addListener = function (component) {
       this.listenables.push(component);
+    }
+
+    /**
+     * @name removeListener
+     * @desc Remove an listener to unwatch the state changes
+     */
+    _store.removeListener = function (component) {
+      var self = this;
+      this.listenables.forEach(function (listener, index) {
+        if (listener === component) {
+          self.listenables.splice(index, 1)
+        }
+      })
     }
     /**
      * @name observe
@@ -85,4 +102,4 @@
     }
     return _r;
   }
-);  
+);
