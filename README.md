@@ -19,8 +19,7 @@
 ### Reasons for use
 * Tiny size: ~1kb
 * Best Performance
-* KISS Principle
-* Reactve Stores
+* Reactive Stores
 * Simple and minimalistic API
 * Support nested states.
 * Unidirectional data flow
