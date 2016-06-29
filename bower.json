@@ -1,7 +1,7 @@
 {
   "name": "_r",
   "description": "A reactive library for Javascript Applications.",
-  "main": "riotux.js",
+  "main": "dist/_r.min.js",
   "authors": [
     "Luis Vinícius <luis@startamus.com.br>"
   ],
