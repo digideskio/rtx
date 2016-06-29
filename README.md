@@ -12,9 +12,6 @@ _r is a reactive library that provides for your application multiple stores, wic
 
 </pre>
 
-### Examples:
- * <a href="https://github.com/luisvinicius167/react-todo/"> React.js Todo Example </a><br>
-
 ### Install
 * Npm: ``` npm install _r ```
 * Bower: ``` bower install _r ```
