@@ -108,11 +108,11 @@ export default class Tasks extends React.Component {
   }
   
   componentWillMount() {
-    todoStore.addListener(this)
+    todoStore.subscribe(this)
   }
   
   componentWillMount() {
-    todoStore.removeListener(this)
+    todoStore.unsubscribe(this)
   }
   render ( ) {
     return (
@@ -200,8 +200,8 @@ Just suggesting.
 
 
 * #### Observing the store state changes in your Component or other Store:
-  * ``` yourStore.addListener( listener ) ```: Add the listener for watch the Store state changes.
-  * ``` yourStore.removeListener( listener ) ```: Remove the listener for unwatch the Store state changes.
+  * ``` yourStore.subscribe( listener ) ```: Add the listener for watch the Store state changes.
+  * ``` yourStore.unsubscribe( listener ) ```: Remove the listener for unwatch the Store state changes.
   * ``` yourStore.get(state) ```: Gets a value of the store state that you passed as argument.
 
 
