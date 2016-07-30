@@ -67,18 +67,18 @@
       }
     }
     /**
-     * @name addListener
+     * @name subscribe
      * @desc Add an listener to watch the state changes
      */
-    _store.addListener = function (component) {
+    _store.subscribe = function (component) {
       this.listenables.push(component);
     }
 
     /**
-     * @name removeListener
+     * @name unsubscribe
      * @desc Remove an listener to unwatch the state changes
      */
-    _store.removeListener = function (component) {
+    _store.unsubscribe = function (component) {
       var self = this;
       this.listenables.forEach(function (listener, index) {
         if (listener === component) {
