@@ -53,18 +53,25 @@
       var args = _slice.call(arguments, 2)
         , state = [_storeContainer[this.name].state]
         ;
+        var self = this;
+        var storeName = self.name;
       _push.apply(state, args);
 
       // call action funciton to change the state
-      _storeContainer[this.name].actions[action].apply(null, state);
-
-      if (this.hasOwnProperty('handler')) {
-        this.handler(
-          this.listenables,
-          stateName,
-          _storeContainer[this.name].state[stateName]
-        );
-      }
+      var p = new Promise(function( resolve, reject ){
+        _storeContainer[storeName].actions[action].apply(null, state);
+        resolve(_storeContainer[storeName].state[stateName])
+      });
+      
+      p.then(function(newValue){
+        if ( self.hasOwnProperty('handler') ) {
+          self.handler(
+            self.listenables,
+            stateName,
+            newValue
+          );
+        }
+      })
     }
     /**
      * @name subscribe
